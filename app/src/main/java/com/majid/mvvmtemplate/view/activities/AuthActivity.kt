@@ -107,7 +107,11 @@ class AuthActivity : AppCompatActivity() {
     private fun validated(): Boolean {
 
         if (binding.etUserName.text.toString().trim().isEmpty()) {
-            binding.etUserName.error = "Enter Email"
+            binding.etUserName.error = "Enter Username"
+            return false
+        }
+        if (binding.etUserName.text.toString().trim().length <10) {
+            binding.etUserName.error = "Username must be 10 characters"
             return false
         }
 
