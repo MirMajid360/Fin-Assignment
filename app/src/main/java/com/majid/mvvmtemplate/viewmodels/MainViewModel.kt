@@ -28,21 +28,31 @@ class MainViewModel @Inject constructor(
     var preferencesRepository: PreferencesRepository, var repository: Repository,
 ) : ViewModel() {
 
+    /***
+     The below _userData declared as mutable live and private so only view model could update it
+    and it could be accessed using the userData that can only be observed not updated by other classes
 
+    **/
     private val _userData: MutableLiveData<ArrayList<User>> = MutableLiveData()
     val userData: LiveData<ArrayList<User>> get() = _userData
 
+    //This Coroutine Exception handle is to handle any exption that may raise in Coroutines
     val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
         throwable.printStackTrace()
     }
 
+        /***
+         *  the below function is used to save the status of user in DataStore /
+         * **/
     fun saveUserLoggedInStatus(isLoggedIn: Boolean) {
         viewModelScope.launch(Dispatchers.IO + coroutineExceptionHandler) {
             preferencesRepository.saveUserLoggedInStatus(isLoggedIn)
         }
 
     }
-
+    /***
+     *The below function is used to checkwhether a user  s logged in or not
+     * **/
     fun getUserLoggedInStatus(): LiveData<Boolean> = liveData {
         val isLoggedIn = preferencesRepository.getUserLoggedInStatus()
         emit(isLoggedIn)
@@ -62,8 +72,10 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    /***
+     * Closing the realm database as the Viewmodel is Cleared
+     * **/
 
-    // Make sure to close Realm instance when ViewModel is cleared
     override fun onCleared() {
         super.onCleared()
         repository.closeRealm()

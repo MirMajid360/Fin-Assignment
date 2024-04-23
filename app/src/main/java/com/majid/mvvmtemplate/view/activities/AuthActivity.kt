@@ -45,6 +45,7 @@ class AuthActivity : AppCompatActivity() {
         handleBackPress()
         binding.btnLogin.setOnClickListener {
             if (validated()){
+                ViewUtils.showProgressDialog(this,"Logging in...")
                 signIn(binding.etUserName.text.toString().trim(),binding.etPassword.text.toString().trim())
             }
         }
@@ -52,6 +53,9 @@ class AuthActivity : AppCompatActivity() {
 
     }
 
+    /***
+     * the below function is used to handle the device back click
+     * **/
 
     var hasBackButtonClicked = false
     private fun handleBackPress() {
@@ -123,6 +127,7 @@ class AuthActivity : AppCompatActivity() {
 
     private fun signIn(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
+
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     ViewUtils.hideProgressDialog()
@@ -144,18 +149,19 @@ class AuthActivity : AppCompatActivity() {
         // [END sign_in_with_email]
     }
 
+    /***
+     * The below function is used to Update the UI with user details or
+     * If we need to save the user details in local or send to the server
+     * For now I am only saving the login status
+     * **/
     private fun updateUI(user: FirebaseUser?) {
 
 
         user?.let {
 
             mainViewModel.saveUserLoggedInStatus(true)
-//            userModel.name = it.displayName.toString()
-//            userModel.email = it.email.toString()
-//            userModel.photoUrl = it.photoUrl.toString()
-//            sharedPref.setData(DBDEFINITIONS.KEY_IS_LOGGED_IN, true)
-//            sharedPref.saveData(DBDEFINITIONS.KEY_EMAIL, user.email)
-//            sharedPref.saveData(DBDEFINITIONS.KEY_USER_INFO, userModel)
+
+
 
             startActivity(Intent(this, MainActivity::class.java))
             finish()

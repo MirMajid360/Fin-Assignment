@@ -19,6 +19,9 @@ class Repository @Inject constructor(private val realm: Realm) {
         return realm.where(User::class.java).findAll()
     }
 
+    /***
+     * This function is used to check whether the data is inserted in Database or not
+     * **/
     fun hasData(): Boolean {
         return realm.where(User::class.java).count() > 0
     }

@@ -27,7 +27,7 @@ android {
         val formattedDate = SimpleDateFormat("HH-mm_dd-MM-yyyy").format(date)
 
 // Set the archivesBaseName property
-        setProperty("archivesBaseName", "MVVM-Template(" + versionName + ")_" + formattedDate)
+        setProperty("archivesBaseName", "Fin-Assignment($versionName)_$formattedDate")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

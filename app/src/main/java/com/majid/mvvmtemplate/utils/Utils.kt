@@ -6,6 +6,11 @@ import com.majid.mvvmtemplate.models.User
 
 object Utils {
 
+    /***
+     * The below function is used to generate the random user data
+     *  And the Function is developed using  the ChatGPT
+     *
+     * **/
     fun generateUsers(): List<User> {
         val users = mutableListOf<User>()
 

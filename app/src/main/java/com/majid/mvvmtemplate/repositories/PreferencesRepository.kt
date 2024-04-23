@@ -21,11 +21,6 @@ class PreferencesRepository @Inject constructor(
     @DataStorePreferences private val dataStore: DataStore<Preferences>,
 ) {
 
-    companion object {
-        // Define keys for preferences
-
-        // Add more keys as needed
-    }
 
     val preferencesFlow: Flow<PreferencesModel> = dataStore.data
         .map { preferences ->
