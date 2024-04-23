@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "959733770628",
+    "project_id": "fin-assignment",
+    "storage_bucket": "fin-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959733770628:android:11e62a1eb35d18c899d5d1",
+        "android_client_info": {
+          "package_name": "com.majid.mvvmtemplate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANDpEqwX_FEYiOX8j6HK94b-RJBnrg7U0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

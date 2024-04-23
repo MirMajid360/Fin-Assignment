@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_theme_color">#7537FA</color>
+    <color name="app_theme_light">#997537FA</color>
+    <color name="text_label_color">#7537FA</color>
+    <color name="app_theme_color_light">#E0E9FF</color>
+    <color name="app_white">#FFFFFF</color>
+    <color name="app_black">#000000</color>
+    <color name="grey">#909090</color>
+    <color name="text_hint_grey">#5A5A5A</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="surface_color">#F3F1F1</color>
+
+    // gradient colors
+
+    <color name="gradient_top">#807537FA</color>
+    <color name="gradient_bottom">#7537FA</color>
+
+
+</resources>

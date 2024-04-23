@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_6sdp"
+    android:padding="@dimen/_10sdp"
+    android:background="@drawable/bg_item_gradient"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="500"
+        android:padding="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvNameValue"
+         />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNameValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="900"
+        android:padding="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvName"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="500"
+        android:padding="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintEnd_toStartOf="@id/tvAgeValue"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAgeValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textFontWeight="900"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvNameValue"
+       app:layout_constraintStart_toEndOf="@id/tvAge" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="500"
+        android:padding="@dimen/_2sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvAge"
+        app:layout_constraintEnd_toStartOf="@id/tvCityValue"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCityValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=" "
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="900"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@id/tvAgeValue"
+        app:layout_constraintStart_toEndOf="@id/tvCity" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

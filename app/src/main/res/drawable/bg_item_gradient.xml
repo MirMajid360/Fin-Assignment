@@ -1,0 +1,11 @@
+<!-- button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/_10sdp" />
+    <gradient
+        android:angle="90"
+        android:endColor="@color/app_white"
+
+        android:startColor="@color/app_white"
+        android:type="linear" />
+
+</shape>
